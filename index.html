@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Ada Tech</title>
+    <link rel="stylesheet" href="/Projeto Ada HTML 1/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="shortcut icon" href="/img/Black and White Monochrome Tech Logo (7) (1).png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <section id="container">
+            <img src="/img/Black and White Monochrome Tech Logo (7).png" alt="logo" id="logo">
+            <nav>
+                <ul>
+                    <li><a href="#" class="homenav">Home</a></li>
+                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#">Skills</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </nav>
+        </section>
+    </header>
+
+    <section class="home">
+        <div class="home-content">
+          <h3>Olá, esse sou eu!</h3>
+          <h1>Juan Figueiredo</h1>
+          <h3>Eu sou <span class="multi">Desenvolvedor Front-End</span></h3>
+          <p>Como Desenvolvedor Web, minha jornada é uma fusão de criatividade e código. Transformo conceitos em experiências envolventes, navegando pela interseção da arte e tecnologia.</p>
+          <div class="social-media">
+              <a href="https://www.linkedin.com/in/juan-figueiredo-67b219284/" style="--i:10;"><i class='bx bxl-linkedin' ></i></a>
+              <a href="https://github.com/juan-figueiredo" style="--i:8;"><i class='bx bxl-github' ></i></a>
+            <a href="https://mail.google.com" style="--i:7;"><i class='bx bxl-gmail'></i></a>
+            <a href="https://www.instagram.com/" style="--i:9;"><i class='bx bxl-instagram-alt' ></i></a>
+          </div>
+          <a href="#" onclick="calc()" class="btn">Download CV</a>
+        </div>
+        <div class="home-img">
+          <img class='foto'src="/img/Design sem nome (2).png">
+        </div>
+      </section>
+      <script src="/Projeto Ada HTML 1/script.js"></script>
+
+      <footer>
+        <p>Transformando ideias em realidade. © Juan Figueiredo 2023 - Todos os Direitos Reservados.</p>
+      </footer>
+</body>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&family=Oxanium:wght@300;400;500;600;700;800&family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    background-color:#0c0a1f;
+}
+
+img{
+        width: 70px;
+        height: 70px;
+        cursor: pointer;
+        justify-content: flex-start;
+        display: flex;
+        margin-right: 180px;
+}
+
+header{
+    background-color: #100D28;
+    justify-content: space-around;
+    
+}
+
+.homenav{
+    color: #CA35E9;
+    text-decoration: underline linear-gradien;
+}
+
+.homenav:hover{
+    color:white;
+}
+
+.home{
+    color:white;
+    display: flex;
+    justify-content: space-around;
+    margin-right: 800px;
+    padding:70px 10% 0;
+    margin-top: 120px;
+}
+
+.home-content{
+    max-width:600px;
+  }
+
+.home-img img{
+    max-width:450px;
+    margin-right:-20px;
+    animation:zoomIn 1s ease forwards, floatImage 4s ease-in-out infinite;
+    animation-delay:2s, 3s;
+    display: flex;
+}  
+
+.multi{
+    color: #CA35E9;
+    background:linear-gradient(45deg, #090DAB,#CA35E9,#090DAB);
+    background-size: 400% 100%;
+    animation: degrade 10s linear infinite alternate;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+:root{
+    --gradient:linear-gradient(
+        to right, #090DAB,#CA35E9
+    )
+}
+
+#container{
+    display: flex;
+    background-color: #100D28;
+    border-radius: 5px;
+    justify-content: space-around;
+}
+
+ul li{
+    text-decoration: none;
+    list-style: none;
+    background-color: #100D28;
+}
+
+ul{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    background-color: #100D28;
+    gap: 90px;
+}
+
+a{
+    text-decoration: none;
+    list-style: none;
+    color: white;
+    background-color: #100D28;
+    font-size: 18px;
+}
+
+a:hover{
+    color: #CA35E9;
+    transition: .5s all;
+    text-shadow: 0 0 30 #090DAB;
+    box-shadow: 0 0 30 #090DAB;
+}
+
+nav{
+    background-color: #0B0B0B;
+    display: flex;
+}
+
+h3{
+    font-size: 36px;
+}
+
+h1{
+    font-size: 58px;
+}
+
+p{
+    font-size: 18px;
+    padding-top: 10px;
+}
+
+
+.social-media a{
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    width:40px;
+    height:40px;
+    border: 2px solid #CA35E9;
+    border-radius: 50%;
+    font-size:20px;
+    color:#CA35E9;
+    text-decoration:none;
+    margin:30px 15px 50px 0;
+    transition: .5s ease;
+  }
+
+  .social-media a:hover{
+    color: white;
+    box-shadow: 0 0 30px  #090DAB;
+  }
+
+  .btn{
+    border: 2px solid #CA35E9;
+    padding: 12px 28px;
+    border-radius: 40px;
+    background: #CA35E9;
+    box-shadow: 0 0 10px #CA35E9;
+    font-size: 16px;
+    color: #0c0a1f;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+.btn:hover{
+    color:white
+}
+
+img .foto{
+    top: 200px;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+
+.home-img img{
+    border-radius: 50%;
+    width: 350px;
+    height: 350px;
+    box-shadow: 0 0 30px #CA35E9;
+    cursor: auto;
+}
+
+.home-img{
+    display: inline;
+    align-items: flex-end;
+    width: 200px;
+    justify-content: flex-end;
+    right: 200px;
+    padding: 0 0 40 0px;
+    position:absolute;
+    left:65%;
+    top: 31%;
+}
+
+
+footer p {
+    color: white;
+    bottom:200px;
+    display:flex;
+    margin-bottom: 20px;
+    text-align: center;
+    align-items: center;
+    background:#100D28;
+}
+
+footer{
+    display:flex;
+    background:#100D28;
+    width:100%;
+    height:50px;
+    bottom:0;
+    position:fixed;
+    opacity:50%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+
+p>footer{
+    margin:5px;
+  padding: 10px;
+  color:white;
+  font-weight:400;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  font-size:14px;
+  margin-left:20px
+}
+
+@keyframes degrade{
+    0%{
+        background-position-x:0%;
+    }
+
+    100%{
+        background-position:400%;
+    }
+}
+</style>
+
+<script>
+    function calc(){
+    alert("Baixando currículo de Juan Figueiredo.....")
+   } 
+</script>
+</html>
