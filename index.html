@@ -7,19 +7,19 @@
     <link rel="stylesheet" href="/Projeto Ada HTML 1/style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="shortcut icon" href="/img/Black and White Monochrome Tech Logo (7) (1).png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
 </head>
 <body>
     <header>
         <section id="container">
-            <img src="/img/Black and White Monochrome Tech Logo (7).png" alt="logo" id="logo">
-            
+            <img src="/Projeto Ada Tech/img/Black and White Monochrome Tech Logo (7).png" alt="logo" id="logo">
             <nav>
                 <ul>
                     <li><a href="#" class="homenav">Home</a></li>
                     <li><a href="#">Sobre</a></li>
                     <li><a href="#">Skills</a></li>
                     <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Contato</a></li>
+                    <li><a href="#login" class="login">Contato</a></li>
                 </ul>
             </nav>
         </section>
@@ -40,14 +40,54 @@
           <a href="#" onclick="calc()" class="btn">Download CV</a>
         </div>
         <div class="home-img">
-          <img class='foto'src="/img/Design sem nome (2).png">
+          <img class='foto'src="/Projeto Ada Tech/img/Design sem nome (2).png" alt="foto" srcset="">
         </div>
       </section>
-      <script src="/Projeto Ada HTML 1/script.js"></script>
-
       <footer>
-        <p>Transformando ideias em realidade. © Juan Figueiredo 2023 - Todos os Direitos Reservados.</p>
-      </footer>
+          <p>Transformando ideias em realidade. © Juan Figueiredo 2023 - Todos os Direitos Reservados.</p>
+        </footer>
+
+        <a href="https://web.whatsapp.com/send?phone=55999999999" target="_blank" class="wpp">
+          <i class="fa fa-whatsapp"></i>
+        </a>
+
+        <br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+        <hr>
+
+        <form method="post" action="https://6529a5b255b137ddc83f1046.mockapi.io/api/v1/user">
+        <div id='login' class="wrapper">
+              <h1>Contato</h1>
+
+              <div class='input-box'>
+                <input name='name' type="text" placeholder='Nome' required autocomplete="off">
+                <i class='bx bxs-user'></i>
+              </div>
+
+              <div class='input-box'>
+                <input name='email' type="email" placeholder='Email' required autocomplete="off">
+                <i class='bx bxs-contact' ></i>
+              </div>
+
+              <div class='input-box'>
+                <input name='number' type="number" class='number' placeholder='WhatsApp' required autocomplete="off">
+                <i class='bx bxs-phone' ></i>
+              </div>
+
+              <div class='input-box2'>
+                <input name='text' type="text" class='mensagem' placeholder='Digite sua mensagem' required autocomplete="off">
+              </div>
+              
+              <div class="remember-forgot">
+                <label><input type="checkbox">Enviar em anonimato</label>
+              </div>
+              <input name='enviar' type='submit' class='btn'></input>
+              <div class="register-link">
+                <p>Precisa de ajuda?
+                <a href="#" class="chat">Clique para abrir o chat!</a></p>
+              </div>
+        </div>
+        </form>
 </body>
 
 <style>
@@ -58,6 +98,20 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
     background-color:#0c0a1f;
+}
+
+hr{
+    background-color: #100D28;
+    color: #100D28;
+    color-scheme: #100D28;
+    opacity: 30%;
+}
+
+html, body{
+    width:100%;
+    max-width: 100vw;
+    height: 140%;
+    scroll-behavior: smooth;
 }
 
 img{
@@ -72,7 +126,12 @@ img{
 header{
     background-color: #100D28;
     justify-content: space-around;
-    
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    z-index: 99; 
 }
 
 .homenav{
@@ -95,6 +154,8 @@ header{
 
 .home-content{
     max-width:600px;
+    position: relative;
+    top: 50px;
   }
 
 .home-img img{
@@ -125,6 +186,8 @@ header{
     background-color: #100D28;
     border-radius: 5px;
     justify-content: space-around;
+    overflow: hidden;
+    position: relative;
 }
 
 ul li{
@@ -173,6 +236,7 @@ h1{
 p{
     font-size: 18px;
     padding-top: 10px;
+    background-color: #0C0A1F;
 }
 
 
@@ -226,6 +290,7 @@ img .foto{
     height: 350px;
     box-shadow: 0 0 30px #CA35E9;
     cursor: auto;
+    position: absolute;
 }
 
 .home-img{
@@ -238,16 +303,17 @@ img .foto{
     position:absolute;
     left:65%;
     top: 31%;
+    position: absolute;
 }
 
 
 footer p {
-    color: white;
-    bottom:200px;
+    color: gray;
+    bottom:300px;
     display:flex;
-    margin-bottom: 20px;
-    text-align: center;
-    align-items: center;
+    margin-bottom: 10px;
+    opacity: 50%;
+    font-size: 16px;
     background:#100D28;
 }
 
@@ -255,26 +321,201 @@ footer{
     display:flex;
     background:#100D28;
     width:100%;
-    height:50px;
+    height:40px;
     bottom:0;
     position:fixed;
-    opacity:50%;
     text-align: center;
     align-items: center;
     justify-content: center;
+    z-index: 99;
+    opacity: 100;
   }
 
-p>footer{
-    margin:5px;
-  padding: 10px;
-  color:white;
-  font-weight:400;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
-  font-size:14px;
-  margin-left:20px
+
+  .wrapper{
+  width:560px;
+  background:transparent;
+  border:2px solid rgba(255, 255, 255, .2);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 30px #CA35E9;
+  border-color: #100D28;
+  color:#fff;
+  border-radius:10px;
+  padding:30px;
+  position: relative;
+  top: 200px;
+  left: 680px;
 }
+
+.wrapper h1{
+  font-size:36px;
+  text-align:center;
+  opacity: 85%;
+}
+
+.wrapper .input-box{
+  position:relative;
+  width:100%;
+  height:50px;
+  margin: 30px 0;
+}
+
+.input-box input{
+  width:100%;
+  height:100%;
+  background:transparent;
+  border:none;
+  outline:none;
+  border: 2px solid rgba(255, 255, 255, .2);
+  border-radius: 40px; 
+  font-size:16px;
+  color:#fff;
+  padding:20px 45px 20px 20px;
+}
+
+.wrapper .input-box2{
+  position:relative;
+  width:100%;
+  height:150px;
+  margin: 30px 0;
+  color: white;
+}
+
+
+.input-box2 input{
+  width:100%;
+  height:100%;
+  border:none;
+  outline:none;
+  border: 2px solid rgba(255, 255, 255, .2);
+  border-radius: 40px; 
+  font-size:16px;
+  color: white;
+  padding:20px 45px 20px 20px;
+}
+
+
+.input-box2{
+  color: white;
+}
+
+.input-box input::placeholder{
+  color:#fff;
+  opacity: 80%;
+}
+
+.input-box i{
+  position:absolute;
+  right:20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size:20px;
+}
+
+.wrapper .remember-forgot{
+  display:flex;
+  justify-content:space-between;
+  font-size:14.5px;
+  margin:-15px 0 15px;
+}
+
+.remember-forgot label input{
+  accent-color:#fff;
+  margin-right:3px;
+}
+
+.remember-forgot a{
+  color: white;
+  text-decoration:none;
+  font-size:14.5px;
+  text-decoration: underline;
+  position: relative;
+  right: 10px
+}
+
+.remember-forgot a:hover{
+  text-decoration:underline;
+}
+
+.wrapper .btn{
+  width:100%;
+  height:45px;
+  background: white;
+  border:none;
+  outline:none;
+  border-radius:40px;
+  box-shadow: 0 0 20px #090DAB;
+  font-size:16px;
+  cursor:pointer;
+  font-weight:600;
+  color:#333;
+  transition: .5s all;
+}
+
+.wrapper .btn:hover{
+    background: #CA35E9;
+    box-shadow: 0 0 10px #CA35E9;
+    font-size: 16px;
+    color: #0c0a1f;
+    transition: .5s all ease-in-out;
+    color: white;
+}
+
+.wrapper .register-link{
+  font-size: 14.5px;
+  text-align: center;
+  margin:20px 0px 15px;
+}
+
+.register-link p a{
+  color:white;
+  text-decoration:none;
+  font-weight: 600;
+}
+
+
+.register-link p a:hover{
+  text-decoration:none;
+  transition: .5s all;
+}
+
+
+.login{
+    top: 0;
+}
+
+.radio{
+    position: relative;
+    left: 100px;
+}
+
+.input-box2 input::placeholder{
+  color:#fff;
+  opacity: 80%;
+}
+
+.wpp{
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  bottom: 60px;
+  right: 20px;
+  background-color: #100D28;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 0 0 30px #CA35E9;
+  z-index: 100;
+  transition: .5s all;
+}
+
+.fa-whatsapp{
+  margin-top: 11px ;
+
+}
+
+
 
 @keyframes degrade{
     0%{
